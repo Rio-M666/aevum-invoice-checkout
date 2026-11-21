@@ -72,6 +72,10 @@ Deployed and exercised end-to-end on chain 44005 (explorer: https://explorer-tes
 - Faucet funding of the deployer (1 tQDAY + 5 tUSD8, QDay Discord faucet):
   tQDAY tx `0xf5cb59b977e8f7f98be4c4cb608786f0ee20a4e937913120ca89f03b9e91bd09`,
   tUSD8 tx `0x6418714848e66e131fc1ea63ce2551a06b026d59a1a73fc8a4e77cb62bea441d`
+- **Live demo**: https://aevum-invoice-checkout.vercel.app/invoices
+  (Vercel production, `NEXT_PUBLIC_NETWORKS=aevum`, `NEXT_PUBLIC_INVOICE_AEVUM` set to the
+  contract above; loads without login)
+- **Public repo**: https://github.com/Rio-M666/aevum-invoice-checkout
 - **Real create → pay cycle** (invoice `0xedae67042e8f99ea57c8a50407483633d9d189d00e1a330662337c1225bb0363`, 2 tUSD8):
   - create: tx `0x1f8e43b4f18d86fdacb92f96186ca0ccb1feba9a8c5493fd5c59e3d270b4863b`
   - approve: tx `0xb21dc03753b8af6a451393e2b4fb88682d8f23786a1eec1ecf00d6f1150ea6e1`
@@ -137,14 +141,14 @@ the challenge asks for addresses + a link to the exact commit instead.
 
 Deadline **11 Dec 2026 08:00 UTC (17:00 JST)** — submit early, the portal slows down at the end.
 
-1. **Public GitHub repo**: push this folder to a new *public* repo under your own account.
-   Before pushing, confirm no secrets are in the tree or history: `BURNER-WALLET-TESTNET-ONLY.txt`
-   and `web/.env.local` are gitignored — verify with `git status` that neither is staged.
-   The kit's MIT license is in `LICENSE`; keep the kit credit (above).
+1. **Public GitHub repo**: ✅ done 2026-11-21 — https://github.com/Rio-M666/aevum-invoice-checkout
+   (public snapshot of this tree; secrets verified absent — the burner file and `.env.local`
+   are gitignored and were never staged. The kit's MIT license is in `LICENSE`.)
 2. **Testnet deployment**: ✅ done 2026-11-21 — see "Live on the real Aevum testnet" above
    for the contract address and the real-testnet create / pay transaction hashes.
-3. **Live demo**: host the web app (e.g. Vercel) with `NEXT_PUBLIC_NETWORKS=aevum` and
-   `NEXT_PUBLIC_INVOICE_AEVUM` set. The demo link must work **without logging in**.
+3. **Live demo**: ✅ done 2026-11-21 — https://aevum-invoice-checkout.vercel.app
+   (Vercel production with `NEXT_PUBLIC_NETWORKS=aevum` and `NEXT_PUBLIC_INVOICE_AEVUM` set;
+   `/` and `/invoices` return 200 without login, contract address confirmed in the client bundle.)
 4. **Submit the BUIDL** at https://dorahacks.io/hackathon/qday with: project name, the problem
    and architecture (this README has both), repo link, demo link, contract address, tx hashes.
 5. **Demo Day (15 Dec)**: the **top 5 projects present a 3–5 minute live walkthrough** on a
